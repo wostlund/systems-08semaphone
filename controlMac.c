@@ -8,14 +8,8 @@
 #include <sys/sem.h>
 #include <unistd.h>
 
-union semun{
-  int val ;
-  struct semid_ds *buf;
-  unsigned short * array;
-  struct seminfo *_buf;
-};
 
-int main(int argc, char * argv []){
+int main(int arg, char * argv []){
   int key = ftok("control.c",12);
   int semkey;
   int shmkey;
